@@ -1,0 +1,10 @@
+{
+  "name": "history-sweeps",
+  "version": "1.0",
+  "description": "Clear all browsing history entries that include a provided string",
+  "permissions":["history"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
