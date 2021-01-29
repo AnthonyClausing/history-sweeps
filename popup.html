@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweeps Popup</title>
+    <style>
+      html, body {
+        margin: 0;
+      }
+      #container {
+        padding: 1rem 3rem;
+        border: 5px gray solid;
+        text-align: center;
+        font-size: 0.75rem;
+      }
+      #query {
+        padding: 0.25rem;
+        margin: 0.25rem;
+        font-size: 0.75rem;
+      }
+      #clean {
+        display: block;
+        color: white;
+        background: rgb(80, 160, 40);
+        border-radius: 0.5rem;
+        font-size: 0.75rem;
+        margin: auto;
+        padding: 0.25rem;
+      }
+      #clean:disabled{
+        background: rgb(240, 240, 240);
+      }
+      #clean:hover:enabled{
+        background: rgb(60, 100, 30);
+      }
+      #time-options{
+        margin: 0.25rem;
+        padding: 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <label>Delete entries including:</label>
+      <input id="query" autocomplete="off" placeholder="i.e facebook"/>
+      <br/>
+      <label for="time-options">As far back as:</label>
+      <select id="time-options">
+        <option value="1 day">1 day</option>
+        <option value="7 days">7 days</option>
+        <option value="1 month">1 month</option>
+        <option value="All time">All time</option>
+      </select>
+      <button id="clean" type="submit" disabled>Clean Up</button>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>
